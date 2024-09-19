@@ -131,7 +131,7 @@ class Endpoint
      */
     public function getFindRoute(): UriInterface
     {
-        return Client::createUri($this->getRouteList()->get(1)?->path ?? '');
+        return Client::createUri($this->getRouteList()->where('method', 'GET')->slice(1,1)->first()?->path ?? '');
     }
 
     /**
