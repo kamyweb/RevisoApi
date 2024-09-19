@@ -7,6 +7,7 @@ use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Message\UriInterface;
 use RectorPrefix20220126\Symfony\Contracts\HttpClient\HttpClientInterface;
 use Weble\RevisoApi\Endpoint\Endpoint;
+use Weble\RevisoApi\Endpoint\InvoicesEndpoint;
 use Weble\RevisoApi\Exceptions\EndpointNotFoundException;
 
 /**
@@ -28,7 +29,7 @@ use Weble\RevisoApi\Exceptions\EndpointNotFoundException;
  * @property-read Endpoint $entries
  * @property-read Endpoint $entrySubtypes
  * @property-read Endpoint $exemptVatCodes
- * @property-read Endpoint $invoices
+ * @property-read InvoicesEndpoint $invoices
  * @property-read Endpoint $invoiceTotals
  * @property-read Endpoint $layouts
  * @property-read Endpoint $numberSeries
