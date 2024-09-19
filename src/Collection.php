@@ -14,7 +14,18 @@ class Collection extends \Illuminate\Support\Collection
         return (new static((array) ($info->collection ?? [])))
             ->withInfo($info)
             ->map(fn ($item) => new Model($client, $keyName, $item))
-            ->keyBy(fn (Model $item) => $item->getData()->get($keyName));
+            ->keyBy(function (Model $item) use ($keyName){
+                $key = $item->getData()->get($keyName);
+                if (!is_object($key)){
+                    return $key;
+                } elseif (method_exists($key, '__toString')) {
+                    return (string) $key;
+                } elseif (property_exists($key, "code")) {
+                    return $key->code;
+                } else {
+                    return $key;
+                }
+            });
     }
 
     public function getMetadata(): ?object
