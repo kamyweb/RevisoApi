@@ -1,6 +1,6 @@
 <?php
 
-namespace Webleit\ZohoBooksApi\Test;
+namespace Weble\ZohoBooksApi\Test;
 
 use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
 use PHPUnit\Framework\TestCase;

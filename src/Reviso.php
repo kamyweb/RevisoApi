@@ -117,7 +117,7 @@ class Reviso
         }
 
         // Dedicated class?
-        $class = '\\Webleit\\RevisoApi\\Endpoint\\' . ucfirst(strtolower($name)) . 'Endpoint';
+        $class = '\\Weble\\RevisoApi\\Endpoint\\' . ucfirst(strtolower($name)) . 'Endpoint';
         if (class_exists($class)) {
             return new $class($this->client, new Uri($endpoints[$name]));
         }

@@ -33,7 +33,7 @@ In order to use the library, just require the composer autoload file, and then f
 
 ```php
 require './vendor/autoload.php';
-$reviso = new \Webleit\RevisoApi\Reviso($appSecretToken, $agreementGrantToken);
+$reviso = new \Weble\RevisoApi\Reviso($appSecretToken, $agreementGrantToken);
 ```
 
 This way, the library will try to find any HTTP Client implementation that you may already have.
@@ -41,14 +41,14 @@ If you want, you can pass a specific Http Client instance to the library like th
 
 ```php
 require './vendor/autoload.php';
-$reviso = new \Webleit\RevisoApi\Reviso($appSecretToken, $agreementGrantToken, $yourHttpClient);
+$reviso = new \Weble\RevisoApi\Reviso($appSecretToken, $agreementGrantToken, $yourHttpClient);
 ```
 
 If you want to use the demo account, just don't specify the auth parameters, and you'll be able to use any
 GET request.
 
 ```php
-$reviso = new \Webleit\RevisoApi\Reviso();
+$reviso = new \Weble\RevisoApi\Reviso();
 ```
 
 ## API calls
