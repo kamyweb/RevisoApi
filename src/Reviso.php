@@ -8,6 +8,7 @@ use Psr\Http\Message\UriInterface;
 use RectorPrefix20220126\Symfony\Contracts\HttpClient\HttpClientInterface;
 use Weble\RevisoApi\Endpoint\Endpoint;
 use Weble\RevisoApi\Endpoint\InvoicesEndpoint;
+use Weble\RevisoApi\Endpoint\ProductsEndpoint;
 use Weble\RevisoApi\Exceptions\EndpointNotFoundException;
 
 /**
@@ -38,7 +39,7 @@ use Weble\RevisoApi\Exceptions\EndpointNotFoundException;
  * @property-read Endpoint $paymentTypes
  * @property-read Endpoint $priceGroups
  * @property-read Endpoint $productGroups
- * @property-read Endpoint $products
+ * @property-read ProductsEndpoint $products
  * @property-read Endpoint $project
  * @property-read Endpoint $quotations
  * @property-read Endpoint $self
